@@ -79,15 +79,15 @@ export default function Services() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {steps.map((step, i) => (
               <div key={step.num} className="section-reveal group" style={{ transitionDelay: `${i * 0.1}s` }}>
-                <div className="border border-white/10 p-8 h-full hover:border-gold-DEFAULT/50 transition-colors duration-300">
+                <div className="border border-white/40 p-8 h-full hover:border-gold-DEFAULT transition-colors duration-300">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="font-oswald font-bold text-gold-DEFAULT text-4xl leading-none opacity-40">{step.num}</div>
-                    <div className="w-10 h-10 border border-gold-DEFAULT/30 flex items-center justify-center mt-1">
+                    <div className="font-oswald font-bold text-gold-DEFAULT text-4xl leading-none">{step.num}</div>
+                    <div className="w-10 h-10 border border-gold-DEFAULT flex items-center justify-center mt-1">
                       <Icon name={step.icon} size={18} className="text-gold-DEFAULT" />
                     </div>
                   </div>
                   <h3 className="font-oswald font-bold text-white text-2xl mb-3">{step.title}</h3>
-                  <p className="font-golos text-white/90 text-sm leading-relaxed">{step.desc}</p>
+                  <p className="font-golos text-white text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}
