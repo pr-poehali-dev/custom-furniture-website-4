@@ -111,35 +111,35 @@ export default function Contacts() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="font-golos text-white/90 text-xs uppercase tracking-wide block mb-2">Ваше имя *</label>
+                    <label className="font-golos text-white text-xs uppercase tracking-wide block mb-2">Ваше имя *</label>
                     <input
                       type="text"
                       required
                       value={form.name}
                       onChange={e => setForm(p => ({ ...p, name: e.target.value }))}
                       placeholder="Как к вам обращаться?"
-                      className="w-full bg-white/5 border border-white/30 focus:border-gold-DEFAULT text-white font-golos text-sm px-4 py-3 outline-none transition-colors placeholder:text-white/40"
+                      className="w-full bg-white/15 border border-white/50 focus:border-gold-DEFAULT text-white font-golos text-sm px-4 py-3 outline-none transition-colors placeholder:text-white/60"
                     />
                   </div>
                   <div>
-                    <label className="font-golos text-white/90 text-xs uppercase tracking-wide block mb-2">Телефон *</label>
+                    <label className="font-golos text-white text-xs uppercase tracking-wide block mb-2">Телефон *</label>
                     <input
                       type="tel"
                       required
                       value={form.phone}
                       onChange={e => setForm(p => ({ ...p, phone: e.target.value }))}
                       placeholder="+7 (___) ___-__-__"
-                      className="w-full bg-white/5 border border-white/30 focus:border-gold-DEFAULT text-white font-golos text-sm px-4 py-3 outline-none transition-colors placeholder:text-white/40"
+                      className="w-full bg-white/15 border border-white/50 focus:border-gold-DEFAULT text-white font-golos text-sm px-4 py-3 outline-none transition-colors placeholder:text-white/60"
                     />
                   </div>
                   <div>
-                    <label className="font-golos text-white/90 text-xs uppercase tracking-wide block mb-2">Что хотите заказать?</label>
+                    <label className="font-golos text-white text-xs uppercase tracking-wide block mb-2">Что хотите заказать?</label>
                     <textarea
                       rows={4}
                       value={form.message}
                       onChange={e => setForm(p => ({ ...p, message: e.target.value }))}
                       placeholder="Кухня, шкаф, размеры — любые детали помогут нам подготовиться..."
-                      className="w-full bg-white/5 border border-white/30 focus:border-gold-DEFAULT text-white font-golos text-sm px-4 py-3 outline-none transition-colors placeholder:text-white/40 resize-none"
+                      className="w-full bg-white/15 border border-white/50 focus:border-gold-DEFAULT text-white font-golos text-sm px-4 py-3 outline-none transition-colors placeholder:text-white/60 resize-none"
                     />
                   </div>
                   <button
@@ -148,7 +148,7 @@ export default function Contacts() {
                   >
                     ОТПРАВИТЬ ЗАЯВКУ
                   </button>
-                  <p className="font-golos text-white/70 text-xs text-center">
+                  <p className="font-golos text-white/90 text-xs text-center">
                     Нажимая кнопку, вы соглашаетесь на обработку персональных данных
                   </p>
                 </form>
