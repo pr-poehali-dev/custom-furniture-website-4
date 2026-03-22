@@ -81,7 +81,7 @@ export default function About() {
               </div>
               <div className="absolute -top-4 -right-4 bg-charcoal-DEFAULT border border-gold-DEFAULT/30 p-5">
                 <div className="font-oswald font-bold text-white text-3xl leading-none">3 000+</div>
-                <div className="font-golos text-white/60 text-xs mt-1">проектов сдано</div>
+                <div className="font-golos text-white/90 text-xs mt-1">проектов сдано</div>
               </div>
             </div>
           </div>

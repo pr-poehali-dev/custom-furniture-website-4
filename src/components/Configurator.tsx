@@ -63,7 +63,7 @@ export default function Configurator() {
           <h2 className="font-oswald font-bold text-white leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)' }}>
             КОНФИГУРАТОР МЕБЕЛИ
           </h2>
-          <p className="font-golos text-white/50 mt-4">
+          <p className="font-golos text-white/90 mt-4">
             Подберите параметры и получите предварительный расчёт стоимости
           </p>
         </div>
@@ -71,7 +71,7 @@ export default function Configurator() {
         <div className="grid lg:grid-cols-2 gap-8">
           <div className="space-y-8">
             <div>
-              <div className="font-oswald text-white/50 text-xs tracking-[0.2em] uppercase mb-4">01. Тип мебели</div>
+              <div className="font-oswald text-white/80 text-xs tracking-[0.2em] uppercase mb-4">01. Тип мебели</div>
               <div className="grid grid-cols-2 gap-3">
                 {furnitureTypes.map(ft => (
                   <button
@@ -80,7 +80,7 @@ export default function Configurator() {
                     className={`flex items-center gap-3 p-4 border transition-all duration-200 ${
                       type === ft.id
                         ? 'border-gold-DEFAULT bg-gold-DEFAULT/10 text-white'
-                        : 'border-white/10 bg-white/5 text-white/50 hover:border-white/30'
+                        : 'border-white/30 bg-white/5 text-white/80 hover:border-white/60'
                     }`}
                   >
                     <Icon name={ft.icon} size={20} className={type === ft.id ? 'text-gold-DEFAULT' : ''} />
@@ -91,7 +91,7 @@ export default function Configurator() {
             </div>
 
             <div>
-              <div className="font-oswald text-white/50 text-xs tracking-[0.2em] uppercase mb-4">02. Материал</div>
+              <div className="font-oswald text-white/80 text-xs tracking-[0.2em] uppercase mb-4">02. Материал</div>
               <div className="grid grid-cols-3 gap-2">
                 {materials.map(mat => (
                   <button
@@ -100,18 +100,18 @@ export default function Configurator() {
                     className={`flex items-center gap-2 p-3 border transition-all duration-200 ${
                       material === mat.id
                         ? 'border-gold-DEFAULT bg-gold-DEFAULT/10'
-                        : 'border-white/10 bg-white/5 hover:border-white/30'
+                        : 'border-white/30 bg-white/5 hover:border-white/60'
                     }`}
                   >
                     <div className="w-5 h-5 rounded-full flex-shrink-0 border" style={{ backgroundColor: mat.color, borderColor: mat.border }} />
-                    <span className={`font-golos text-xs ${material === mat.id ? 'text-white' : 'text-white/50'}`}>{mat.label}</span>
+                    <span className={`font-golos text-xs ${material === mat.id ? 'text-white' : 'text-white/80'}`}>{mat.label}</span>
                   </button>
                 ))}
               </div>
             </div>
 
             <div>
-              <div className="font-oswald text-white/50 text-xs tracking-[0.2em] uppercase mb-4">03. Цвет</div>
+              <div className="font-oswald text-white/80 text-xs tracking-[0.2em] uppercase mb-4">03. Цвет</div>
               <div className="flex flex-wrap gap-3">
                 {colors.map(c => (
                   <button
@@ -125,13 +125,13 @@ export default function Configurator() {
                   />
                 ))}
               </div>
-              <div className="font-golos text-white/40 text-xs mt-2">
+              <div className="font-golos text-white/80 text-xs mt-2">
                 Выбрано: {colors.find(c => c.id === color)?.label}
               </div>
             </div>
 
             <div>
-              <div className="font-oswald text-white/50 text-xs tracking-[0.2em] uppercase mb-4">04. Размеры (см)</div>
+              <div className="font-oswald text-white/80 text-xs tracking-[0.2em] uppercase mb-4">04. Размеры (см)</div>
               <div className="space-y-4">
                 {[
                   { label: 'Ширина', value: width, set: setWidth, min: 60, max: 400 },
@@ -140,7 +140,7 @@ export default function Configurator() {
                 ].map(dim => (
                   <div key={dim.label}>
                     <div className="flex justify-between mb-2">
-                      <span className="font-golos text-white/60 text-sm">{dim.label}</span>
+                      <span className="font-golos text-white/90 text-sm">{dim.label}</span>
                       <span className="font-oswald text-gold-DEFAULT font-semibold">{dim.value} см</span>
                     </div>
                     <input
@@ -151,7 +151,7 @@ export default function Configurator() {
                       onChange={e => dim.set(Number(e.target.value))}
                       className="w-full h-1 appearance-none cursor-pointer"
                       style={{
-                        background: `linear-gradient(to right, #C9A84C ${((dim.value - dim.min) / (dim.max - dim.min)) * 100}%, rgba(255,255,255,0.1) 0%)`
+                        background: `linear-gradient(to right, #C9A84C ${((dim.value - dim.min) / (dim.max - dim.min)) * 100}%, rgba(255,255,255,0.2) 0%)`
                       }}
                     />
                   </div>
@@ -161,7 +161,7 @@ export default function Configurator() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <div className="flex-1 bg-white/5 border border-white/10 flex items-center justify-center relative overflow-hidden min-h-[300px]">
+            <div className="flex-1 bg-white/5 border border-white/20 flex items-center justify-center relative overflow-hidden min-h-[300px]">
               <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'linear-gradient(45deg, #C9A84C 25%, transparent 25%), linear-gradient(-45deg, #C9A84C 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #C9A84C 75%), linear-gradient(-45deg, transparent 75%, #C9A84C 75%)', backgroundSize: '20px 20px', backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px' }} />
 
               <div className="relative flex flex-col items-center justify-center">
@@ -192,18 +192,18 @@ export default function Configurator() {
                   </div>
                 )}
                 <div className="mt-4 text-center">
-                  <div className="font-golos text-white/40 text-xs">{width} × {height} × {depth} см</div>
-                  <div className="font-golos text-white/30 text-xs mt-1">{materials.find(m => m.id === material)?.label} · {colors.find(c => c.id === color)?.label}</div>
+                  <div className="font-golos text-white/80 text-xs">{width} × {height} × {depth} см</div>
+                  <div className="font-golos text-white/70 text-xs mt-1">{materials.find(m => m.id === material)?.label} · {colors.find(c => c.id === color)?.label}</div>
                 </div>
               </div>
             </div>
 
             <div className="bg-white/5 border border-gold-DEFAULT/30 p-6">
-              <div className="font-oswald text-white/50 text-xs tracking-[0.2em] uppercase mb-4">Предварительная стоимость</div>
+              <div className="font-oswald text-white/80 text-xs tracking-[0.2em] uppercase mb-4">Предварительная стоимость</div>
               <div className="font-oswald font-bold text-gold-DEFAULT text-5xl mb-2">
                 {estimate.toLocaleString('ru')} ₽
               </div>
-              <p className="font-golos text-white/40 text-xs mb-6">
+              <p className="font-golos text-white/80 text-xs mb-6">
                 * Ориентировочная цена. Точный расчёт — после выезда замерщика
               </p>
               <div className="space-y-3 mb-6">
@@ -212,8 +212,8 @@ export default function Configurator() {
                   { label: 'Материал', val: materials.find(m => m.id === material)?.label },
                   { label: 'Размеры', val: `${width} × ${height} × ${depth} см` },
                 ].map(row => (
-                  <div key={row.label} className="flex justify-between border-b border-white/5 pb-2">
-                    <span className="font-golos text-white/40 text-sm">{row.label}</span>
+                  <div key={row.label} className="flex justify-between border-b border-white/10 pb-2">
+                    <span className="font-golos text-white/80 text-sm">{row.label}</span>
                     <span className="font-golos text-white text-sm">{row.val}</span>
                   </div>
                 ))}

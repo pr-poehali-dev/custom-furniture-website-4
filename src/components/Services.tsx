@@ -87,7 +87,7 @@ export default function Services() {
                     </div>
                   </div>
                   <h3 className="font-oswald font-bold text-white text-2xl mb-3">{step.title}</h3>
-                  <p className="font-golos text-white/50 text-sm leading-relaxed">{step.desc}</p>
+                  <p className="font-golos text-white/90 text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}

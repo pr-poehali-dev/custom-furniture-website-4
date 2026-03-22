@@ -42,7 +42,7 @@ export default function Contacts() {
           <h2 className="font-oswald font-bold text-charcoal-DEFAULT leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)' }}>
             КОНТАКТЫ
           </h2>
-          <p className="font-golos text-charcoal-medium mt-4">Ответим в течение 15 минут в рабочее время</p>
+          <p className="font-golos text-charcoal-DEFAULT mt-4">Ответим в течение 15 минут в рабочее время</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -63,7 +63,7 @@ export default function Contacts() {
                     <Icon name={contact.icon} size={18} className="text-gold-DEFAULT group-hover:text-charcoal-DEFAULT transition-colors duration-300" />
                   </div>
                   <div>
-                    <div className="font-golos text-charcoal-medium text-xs mb-1 uppercase tracking-wide">{contact.label}</div>
+                    <div className="font-golos text-charcoal-DEFAULT text-xs mb-1 uppercase tracking-wide font-semibold">{contact.label}</div>
                     <div className="font-oswald font-semibold text-charcoal-DEFAULT">{contact.value}</div>
                   </div>
                 </a>
@@ -71,16 +71,16 @@ export default function Contacts() {
             </div>
 
             <div className="bg-charcoal-DEFAULT p-6">
-              <div className="font-oswald text-white/50 text-xs tracking-[0.2em] uppercase mb-4">Мы в соцсетях</div>
+              <div className="font-oswald text-white/80 text-xs tracking-[0.2em] uppercase mb-4">Мы в соцсетях</div>
               <div className="flex flex-wrap gap-3">
                 {socials.map(s => (
                   <a
                     key={s.label}
                     href={s.href}
-                    className="flex items-center gap-2 bg-white/5 hover:bg-gold-DEFAULT border border-white/10 hover:border-gold-DEFAULT px-4 py-2.5 group transition-all duration-300"
+                    className="flex items-center gap-2 bg-white/5 hover:bg-gold-DEFAULT border border-white/30 hover:border-gold-DEFAULT px-4 py-2.5 group transition-all duration-300"
                   >
                     <Icon name={s.icon} size={16} className="text-gold-DEFAULT group-hover:text-charcoal-DEFAULT transition-colors" />
-                    <span className="font-golos text-white/70 group-hover:text-charcoal-DEFAULT text-sm transition-colors">{s.label}</span>
+                    <span className="font-golos text-white group-hover:text-charcoal-DEFAULT text-sm transition-colors">{s.label}</span>
                   </a>
                 ))}
               </div>
@@ -88,7 +88,7 @@ export default function Contacts() {
 
             <div className="bg-cream-DEFAULT p-6 border-l-4 border-gold-DEFAULT">
               <div className="font-oswald font-bold text-charcoal-DEFAULT text-xl mb-2">Бесплатный выезд замерщика</div>
-              <p className="font-golos text-charcoal-medium text-sm leading-relaxed">
+              <p className="font-golos text-charcoal-DEFAULT text-sm leading-relaxed">
                 Приедем в любую точку Крыма. Замер и консультация — бесплатно. 
                 3D-проект в подарок при заказе от 50 000 ₽.
               </p>
@@ -98,7 +98,7 @@ export default function Contacts() {
           <div className="section-reveal" style={{ transitionDelay: '0.2s' }}>
             <div className="bg-charcoal-DEFAULT p-8 md:p-10">
               <div className="font-oswald font-bold text-white text-2xl mb-2">ОСТАВЬТЕ ЗАЯВКУ</div>
-              <p className="font-golos text-white/50 text-sm mb-8">Перезвоним в течение 15 минут</p>
+              <p className="font-golos text-white/90 text-sm mb-8">Перезвоним в течение 15 минут</p>
 
               {sent ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
@@ -106,40 +106,40 @@ export default function Contacts() {
                     <Icon name="Check" size={32} className="text-charcoal-DEFAULT" />
                   </div>
                   <div className="font-oswald font-bold text-white text-2xl mb-2">Заявка отправлена!</div>
-                  <p className="font-golos text-white/50 text-sm">Мы перезвоним вам в ближайшее время</p>
+                  <p className="font-golos text-white/90 text-sm">Мы перезвоним вам в ближайшее время</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="font-golos text-white/50 text-xs uppercase tracking-wide block mb-2">Ваше имя *</label>
+                    <label className="font-golos text-white/90 text-xs uppercase tracking-wide block mb-2">Ваше имя *</label>
                     <input
                       type="text"
                       required
                       value={form.name}
                       onChange={e => setForm(p => ({ ...p, name: e.target.value }))}
                       placeholder="Как к вам обращаться?"
-                      className="w-full bg-white/5 border border-white/10 focus:border-gold-DEFAULT text-white font-golos text-sm px-4 py-3 outline-none transition-colors placeholder:text-white/20"
+                      className="w-full bg-white/5 border border-white/30 focus:border-gold-DEFAULT text-white font-golos text-sm px-4 py-3 outline-none transition-colors placeholder:text-white/40"
                     />
                   </div>
                   <div>
-                    <label className="font-golos text-white/50 text-xs uppercase tracking-wide block mb-2">Телефон *</label>
+                    <label className="font-golos text-white/90 text-xs uppercase tracking-wide block mb-2">Телефон *</label>
                     <input
                       type="tel"
                       required
                       value={form.phone}
                       onChange={e => setForm(p => ({ ...p, phone: e.target.value }))}
                       placeholder="+7 (___) ___-__-__"
-                      className="w-full bg-white/5 border border-white/10 focus:border-gold-DEFAULT text-white font-golos text-sm px-4 py-3 outline-none transition-colors placeholder:text-white/20"
+                      className="w-full bg-white/5 border border-white/30 focus:border-gold-DEFAULT text-white font-golos text-sm px-4 py-3 outline-none transition-colors placeholder:text-white/40"
                     />
                   </div>
                   <div>
-                    <label className="font-golos text-white/50 text-xs uppercase tracking-wide block mb-2">Что хотите заказать?</label>
+                    <label className="font-golos text-white/90 text-xs uppercase tracking-wide block mb-2">Что хотите заказать?</label>
                     <textarea
                       rows={4}
                       value={form.message}
                       onChange={e => setForm(p => ({ ...p, message: e.target.value }))}
                       placeholder="Кухня, шкаф, размеры — любые детали помогут нам подготовиться..."
-                      className="w-full bg-white/5 border border-white/10 focus:border-gold-DEFAULT text-white font-golos text-sm px-4 py-3 outline-none transition-colors placeholder:text-white/20 resize-none"
+                      className="w-full bg-white/5 border border-white/30 focus:border-gold-DEFAULT text-white font-golos text-sm px-4 py-3 outline-none transition-colors placeholder:text-white/40 resize-none"
                     />
                   </div>
                   <button
@@ -148,7 +148,7 @@ export default function Contacts() {
                   >
                     ОТПРАВИТЬ ЗАЯВКУ
                   </button>
-                  <p className="font-golos text-white/30 text-xs text-center">
+                  <p className="font-golos text-white/70 text-xs text-center">
                     Нажимая кнопку, вы соглашаетесь на обработку персональных данных
                   </p>
                 </form>

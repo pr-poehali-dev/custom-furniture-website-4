@@ -64,7 +64,7 @@ export default {
 				charcoal: {
 					DEFAULT: '#1A1A1A',
 					light: '#2D2D2D',
-					medium: '#404040',
+					medium: '#2A2A2A',
 				},
 				cream: {
 					DEFAULT: '#F5F0E8',

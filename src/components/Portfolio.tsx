@@ -68,7 +68,7 @@ export default function Portfolio() {
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-charcoal-DEFAULT/90 to-transparent translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <div className="font-golos text-gold-DEFAULT text-xs mb-1">{work.cat} · {work.location}</div>
                   <div className="font-oswald font-semibold text-white">{work.title}</div>
-                  <div className="font-golos text-white/60 text-xs mt-0.5">{work.area}</div>
+                  <div className="font-golos text-white/90 text-xs mt-0.5">{work.area}</div>
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function Portfolio() {
             <div className="font-oswald font-bold text-white text-3xl mb-2">ОТЗЫВЫ КЛИЕНТОВ</div>
             <div className="flex items-center justify-center gap-1">
               {[1,2,3,4,5].map(s => <span key={s} className="text-gold-DEFAULT text-xl">★</span>)}
-              <span className="font-golos text-white/50 text-sm ml-2">5.0 / 200+ отзывов</span>
+              <span className="font-golos text-white/90 text-sm ml-2">5.0 / 200+ отзывов</span>
             </div>
           </div>
 
@@ -105,7 +105,7 @@ export default function Portfolio() {
                 <button
                   key={i}
                   onClick={() => setActive(i)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${i === active ? 'bg-gold-DEFAULT w-6' : 'bg-white/20'}`}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${i === active ? 'bg-gold-DEFAULT w-6' : 'bg-white/50'}`}
                 />
               ))}
             </div>

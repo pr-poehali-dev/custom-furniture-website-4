@@ -69,10 +69,10 @@ export default function Hero() {
           <h1 className="font-oswald font-bold text-white leading-none mb-4" style={{ fontSize: 'clamp(3rem, 7vw, 7rem)' }}>
             МЕБЕЛЬ<br />
             <span className="text-gold-DEFAULT">НА ЗАКАЗ</span><br />
-            <span className="text-white/60 font-light">В КРЫМУ</span>
+            <span className="text-white/90 font-light">В КРЫМУ</span>
           </h1>
 
-          <p className="font-golos text-white/70 text-lg mb-10 max-w-lg leading-relaxed">
+          <p className="font-golos text-white text-lg mb-10 max-w-lg leading-relaxed">
             Производим мебель с 2012 года. Кухни, шкафы, диваны, кровати — 
             создаём под ваши размеры и вкус. Работаем по всему Крыму.
           </p>
@@ -87,7 +87,7 @@ export default function Hero() {
             </button>
             <button
               onClick={handleContacts}
-              className="flex items-center gap-3 border border-white/30 hover:border-gold-DEFAULT text-white hover:text-gold-DEFAULT font-oswald font-semibold text-base px-8 py-4 tracking-wider transition-all duration-300"
+              className="flex items-center gap-3 border border-white/60 hover:border-gold-DEFAULT text-white hover:text-gold-DEFAULT font-oswald font-semibold text-base px-8 py-4 tracking-wider transition-all duration-300"
             >
               БЕСПЛАТНЫЙ ЗАМЕР
             </button>
@@ -95,13 +95,13 @@ export default function Hero() {
         </div>
 
         <div className={`absolute right-0 top-1/2 -translate-y-1/2 hidden xl:block transition-all duration-1000 delay-300 ${visible ? 'opacity-100 translate-x-0' : 'opacity-100 translate-x-20'}`}>
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 mr-12">
-            <div className="font-oswald text-white/50 text-xs tracking-[0.2em] uppercase mb-4">Категории</div>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/20 p-6 mr-12">
+            <div className="font-oswald text-white/80 text-xs tracking-[0.2em] uppercase mb-4">Категории</div>
             {['Кухни', 'Шкафы', 'Кровати', 'Диваны', 'Прихожие'].map((cat, i) => (
-              <div key={cat} className="flex items-center gap-3 py-2 border-b border-white/5 last:border-0 cursor-pointer group">
+              <div key={cat} className="flex items-center gap-3 py-2 border-b border-white/10 last:border-0 cursor-pointer group">
                 <span className="font-oswald text-xs text-gold-DEFAULT">{String(i + 1).padStart(2, '0')}</span>
-                <span className="font-golos text-white/60 group-hover:text-white transition-colors text-sm">{cat}</span>
-                <Icon name="ArrowRight" size={12} className="ml-auto text-white/20 group-hover:text-gold-DEFAULT transition-colors" />
+                <span className="font-golos text-white/90 group-hover:text-white transition-colors text-sm">{cat}</span>
+                <Icon name="ArrowRight" size={12} className="ml-auto text-white/50 group-hover:text-gold-DEFAULT transition-colors" />
               </div>
             ))}
           </div>
@@ -113,7 +113,7 @@ export default function Hero() {
           {stats.map((stat) => (
             <div key={stat.label} className="py-6 px-8 text-center">
               <div className="font-oswald font-bold text-gold-DEFAULT text-3xl mb-1">{stat.value}</div>
-              <div className="font-golos text-white/50 text-sm">{stat.label}</div>
+              <div className="font-golos text-white/90 text-sm">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -124,7 +124,7 @@ export default function Hero() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-1 transition-all duration-300 ${i === current ? 'h-8 bg-gold-DEFAULT' : 'h-3 bg-white/30'}`}
+            className={`w-1 transition-all duration-300 ${i === current ? 'h-8 bg-gold-DEFAULT' : 'h-3 bg-white/50'}`}
           />
         ))}
       </div>
