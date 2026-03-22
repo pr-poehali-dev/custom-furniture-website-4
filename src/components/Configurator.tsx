@@ -52,7 +52,7 @@ export default function Configurator() {
   const selectedMat = materials.find(m => m.id === material);
 
   return (
-    <section id="configurator" className="py-24 bg-charcoal-DEFAULT overflow-hidden">
+    <section id="configurator" className="py-24 overflow-hidden bg-slate-700">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
