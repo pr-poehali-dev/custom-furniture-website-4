@@ -73,13 +73,13 @@ export default function Services() {
               <span className="font-golos text-gold-DEFAULT text-sm tracking-[0.25em] uppercase">Как мы работаем</span>
               <div className="h-px w-12 bg-gold-DEFAULT" />
             </div>
-            <h2 className="font-oswald font-bold text-white text-4xl">ЭТАПЫ РАБОТЫ</h2>
+            <h2 className="font-oswald font-bold text-4xl text-slate-700">ЭТАПЫ РАБОТЫ</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {steps.map((step, i) => (
               <div key={step.num} className="section-reveal group" style={{ transitionDelay: `${i * 0.1}s` }}>
-                <div className="border border-white/40 p-8 h-full hover:border-gold-DEFAULT transition-colors duration-300">
+                <div className="border border-white/40 p-8 h-full hover:border-gold-DEFAULT transition-colors duration-300 bg-slate-700">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="font-oswald font-bold text-gold-DEFAULT text-4xl leading-none">{step.num}</div>
                     <div className="w-10 h-10 border border-gold-DEFAULT flex items-center justify-center mt-1">

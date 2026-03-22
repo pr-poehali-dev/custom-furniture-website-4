@@ -17,7 +17,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-charcoal-DEFAULT border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-16 bg-slate-600">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-5">
@@ -70,9 +70,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="font-golos text-white/70 text-xs text-center md:text-left">
-            © 2024 Формула Мебели. Все права защищены.
-          </div>
+          <div className="font-golos text-white/70 text-xs text-center md:text-left">© 2026 Формула Мебели. Все права защищены.</div>
           <div className="font-golos text-white/60 text-xs">
             Мебель на заказ в Крыму · Симферополь
           </div>
